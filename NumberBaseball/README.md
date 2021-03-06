@@ -43,4 +43,10 @@ console app 결과 출력
 
 - 입력 값을 Set 으로 타입 캐스팅하여서 중복되는 값이 들어오는지 검사할 수 있도록 함.
 
-  
+관련 TIL, TWL 링크
+
+[02.24 - TIL](https://velog.io/@leeyoungwoozz/TIL-2021.02.24-Tue)
+[02.25 - TIL](https://velog.io/@leeyoungwoozz/TIL-2021.02.26-Thu)
+[02.26 - TIL](https://velog.io/@leeyoungwoozz/TIL-2021.02.26-Fri)
+[02.23 - 02.26](https://velog.io/@leeyoungwoozz/TWL-2021.02.23-2021.02.26)
+
