@@ -50,8 +50,8 @@ class RockPaperScissorsGame {
             
             var playerHand: Hand
             do {
-                if let notNilplayerHand = try getHandByPlayer() {
-                    playerHand = notNilplayerHand
+                if let handByPlayer = try getHandByPlayer() {
+                    playerHand = handByPlayer
                 } else {
                     print("게임종료")
                     break
