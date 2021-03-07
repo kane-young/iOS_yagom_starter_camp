@@ -6,10 +6,15 @@
 //
 
 class MukjjibbaGame: RockPaperScissorsGame {
-    var winner: String
+    var winner: GamePlayer
     
-    init(winner: GamePlayer) {
-        self.winner = winner.rawValue
+    init(winner: RockPaperScissorsGame.GamePlayer) {
+        switch winner {
+        case .computer:
+            self.winner = .computer
+        case .player:
+            self.winner = .player
+        }
     }
     
     override func gameResult(_ playersHand: Hand, vs computersHand: Hand) -> Bool {
@@ -17,11 +22,11 @@ class MukjjibbaGame: RockPaperScissorsGame {
             print("\(winner)의 승리!")
             return false
         } else if playersHand > computersHand {
-            winner = "플레이어"
+            winner = .player
             print("\(winner)의 턴입니다")
             return true
         } else {
-            winner = "컴퓨터"
+            winner = .computer
             print("\(winner)의 턴입니다")
             return true
         }

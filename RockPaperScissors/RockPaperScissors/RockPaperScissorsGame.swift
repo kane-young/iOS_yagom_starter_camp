@@ -6,9 +6,18 @@
 //
 
 public class RockPaperScissorsGame {
-    enum GamePlayer: String {
-        case player = "플레이어"
-        case computer = "컴퓨터"
+    enum GamePlayer: CustomStringConvertible {
+        case player
+        case computer
+        
+        var description: String {
+            switch self {
+            case .player:
+                return "플레이어"
+            case .computer:
+                return "컴퓨터"
+            }
+        }
     }
     
     enum Hand: String, CaseIterable, Comparable {
