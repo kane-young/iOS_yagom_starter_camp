@@ -5,6 +5,6 @@
 //
 
 
-let mukjjibba = RockPaperScissorsGame()
-mukjjibba.startGame()
+let rockpaperScissors = RockPaperScissorsGame()
+rockpaperScissors.startGame()
 
