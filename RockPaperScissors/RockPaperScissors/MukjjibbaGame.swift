@@ -8,7 +8,7 @@
 class MukjjibbaGame: RockPaperScissorsGame {
     var winner: String
     
-    init(winner: gamePlayer) {
+    init(winner: GamePlayer) {
         self.winner = winner.rawValue
     }
     

@@ -6,7 +6,7 @@
 //
 
 public class RockPaperScissorsGame {
-    enum gamePlayer: String {
+    enum GamePlayer: String {
         case player = "플레이어"
         case computer = "컴퓨터"
     }
