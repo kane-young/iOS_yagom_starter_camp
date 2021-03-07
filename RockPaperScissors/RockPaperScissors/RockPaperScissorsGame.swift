@@ -5,7 +5,7 @@
 //  Created by 강경 on 2021/03/05.
 //
 
-public class RockPaperScissorsGame {
+class RockPaperScissorsGame {
     enum GamePlayer: CustomStringConvertible {
         case player
         case computer
