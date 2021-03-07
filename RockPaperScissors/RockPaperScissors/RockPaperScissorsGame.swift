@@ -40,6 +40,12 @@ class RockPaperScissorsGame {
         case invalidInput
     }
     
+    enum GameResult {
+        case computer
+        case user
+        case none
+    }
+    
     func startGame() {
         var isRepeated = false
         
@@ -62,22 +68,27 @@ class RockPaperScissorsGame {
                 continue
             }
 
-            isRepeated = gameResult(playerHand, vs: computersHand)
+            let result = gameResult(playerHand, vs: computersHand)
+            if result == .none {
+                isRepeated = true
+            } else {
+                isRepeated = false
+            }
         } while isRepeated
     }
     
-    func gameResult(_ playersHand: Hand, vs computersHand: Hand) -> Bool {
+    func gameResult(_ playersHand: Hand, vs computersHand: Hand) -> GameResult {
         if playersHand == computersHand {
             print("비겼습니다.")
-            return true
+            return .none
         } else if playersHand > computersHand {
             print("이겼습니다.")
             MukjjibbaGame(winner: .user).startGame()
-            return false
+            return .user
         } else {
             print("졌습니다.")
             MukjjibbaGame(winner: .computer).startGame()
-            return false
+            return .computer
         }
     }
         

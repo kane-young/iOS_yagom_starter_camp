@@ -17,18 +17,23 @@ class MukjjibbaGame: RockPaperScissorsGame {
         }
     }
     
-    override func gameResult(_ playersHand: Hand, vs computersHand: Hand) -> Bool {
+    override func gameResult(_ playersHand: Hand, vs computersHand: Hand) -> GameResult {
         if playersHand == computersHand {
             print("\(winner)의 승리!")
-            return false
+            switch winner {
+            case .computer:
+                return .computer
+            case .user:
+                return .user
+            }
         } else if playersHand > computersHand {
             winner = .user
             print("\(winner)의 턴입니다")
-            return true
+            return .none
         } else {
             winner = .computer
             print("\(winner)의 턴입니다")
-            return true
+            return .none
         }
     }
         
