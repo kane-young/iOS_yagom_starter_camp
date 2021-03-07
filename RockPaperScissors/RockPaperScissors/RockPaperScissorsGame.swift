@@ -7,12 +7,12 @@
 
 class RockPaperScissorsGame {
     enum GamePlayer: CustomStringConvertible {
-        case player
+        case user
         case computer
         
         var description: String {
             switch self {
-            case .player:
+            case .user:
                 return "플레이어"
             case .computer:
                 return "컴퓨터"
@@ -72,7 +72,7 @@ class RockPaperScissorsGame {
             return true
         } else if playersHand > computersHand {
             print("이겼습니다.")
-            MukjjibbaGame(winner: .player).startGame()
+            MukjjibbaGame(winner: .user).startGame()
             return false
         } else {
             print("졌습니다.")

@@ -12,8 +12,8 @@ class MukjjibbaGame: RockPaperScissorsGame {
         switch winner {
         case .computer:
             self.winner = .computer
-        case .player:
-            self.winner = .player
+        case .user:
+            self.winner = .user
         }
     }
     
@@ -22,7 +22,7 @@ class MukjjibbaGame: RockPaperScissorsGame {
             print("\(winner)의 승리!")
             return false
         } else if playersHand > computersHand {
-            winner = .player
+            winner = .user
             print("\(winner)의 턴입니다")
             return true
         } else {
