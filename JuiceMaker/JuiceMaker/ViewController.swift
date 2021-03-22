@@ -68,11 +68,11 @@ class ViewController: UIViewController {
     }
     
     private func updateFruitCount() {
-        strawberryCountLabel.text = String(JuiceMaker.shared.readStock(of: .strawberry))
-        bananaCountLabel.text = String(JuiceMaker.shared.readStock(of: .banana))
-        kiwiCountLabel.text = String(JuiceMaker.shared.readStock(of: .kiwi))
-        pineappleCountLabel.text = String(JuiceMaker.shared.readStock(of: .pineapple))
-        mangoCountLabel.text = String(JuiceMaker.shared.readStock(of: .mango))
+        strawberryCountLabel.text = JuiceMaker.shared.readStock(of: .strawberry)
+        bananaCountLabel.text = JuiceMaker.shared.readStock(of: .banana)
+        kiwiCountLabel.text = JuiceMaker.shared.readStock(of: .kiwi)
+        pineappleCountLabel.text = JuiceMaker.shared.readStock(of: .pineapple)
+        mangoCountLabel.text = JuiceMaker.shared.readStock(of: .mango)
     }
 }
 
