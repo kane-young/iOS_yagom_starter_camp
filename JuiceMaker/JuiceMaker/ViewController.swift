@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     
     //MARK:-- @IBAction Function
 
-    @IBAction func moveStock(_ sender: Any) {
+    @IBAction private func moveStock(_ sender: Any) {
         guard let stockVC = self.storyboard?.instantiateViewController(identifier: "stockVC") else {
             return
         }
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         self.present(stockVC, animated: false, completion: nil)
     }
     
-    @IBAction func orderJuice(_ sender: OrderJuiceButton) {
+    @IBAction private func orderJuice(_ sender: OrderJuiceButton) {
         guard let juice = sender.juice else {
             return
         }
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
 
     //MARK:-- function
 
-    func initializeButtons() {
+    private func initializeButtons() {
         orderStrawberryJuiceButton.juice = .strawberry
         orderBananaJuiceButton.juice = .banana
         orderStrawberryBananaJuiceButton.juice = .strawberryBanana
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         orderPineappleJuiceButton.juice = .pineapple
     }
     
-    func updateFruitCount() {
+    private func updateFruitCount() {
         strawberryCountLabel.text = String(JuiceMaker.shared.readStock(of: .strawberry))
         bananaCountLabel.text = String(JuiceMaker.shared.readStock(of: .banana))
         kiwiCountLabel.text = String(JuiceMaker.shared.readStock(of: .kiwi))

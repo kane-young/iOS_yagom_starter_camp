@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xy-oJ-TA3">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +12,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JuiceMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="strawberry" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-xq-wUY">
@@ -165,9 +164,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bananaCount" destination="Gbz-dc-Ktc" id="ubV-8E-qmN"/>
-                        <outlet property="kiwiCount" destination="ghS-vv-UcU" id="lbO-6h-gkd"/>
-                        <outlet property="mangoCount" destination="cTj-sr-IKQ" id="jYo-h5-l8T"/>
+                        <outlet property="bananaCountLabel" destination="Gbz-dc-Ktc" id="ubV-8E-qmN"/>
+                        <outlet property="kiwiCountLabel" destination="ghS-vv-UcU" id="lbO-6h-gkd"/>
+                        <outlet property="mangoCountLabel" destination="cTj-sr-IKQ" id="jYo-h5-l8T"/>
                         <outlet property="orderBananaJuiceButton" destination="2Kt-tf-yIh" id="X4d-4d-uLi"/>
                         <outlet property="orderKiwiJuiceButton" destination="CqD-ol-OGW" id="7gR-1q-xDb"/>
                         <outlet property="orderMangoJuiceButton" destination="sDa-UI-Ozu" id="dij-dV-9Qx"/>
@@ -175,8 +174,8 @@
                         <outlet property="orderPineappleJuiceButton" destination="MPp-Df-Ur3" id="z93-jq-stb"/>
                         <outlet property="orderStrawberryBananaJuiceButton" destination="LCV-M7-W1O" id="yoo-0T-2Vz"/>
                         <outlet property="orderStrawberryJuiceButton" destination="cK8-og-7fr" id="Hrf-Yo-Daf"/>
-                        <outlet property="pineappleCount" destination="Um5-92-aTG" id="EMc-Ca-bG4"/>
-                        <outlet property="strawberryCount" destination="ddR-gt-XFN" id="GAc-HW-gc4"/>
+                        <outlet property="pineappleCountLabel" destination="Um5-92-aTG" id="EMc-Ca-bG4"/>
+                        <outlet property="strawberryCountLabel" destination="ddR-gt-XFN" id="GAc-HW-gc4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -188,11 +187,11 @@
             <objects>
                 <viewController storyboardIdentifier="stockVC" id="OM7-Cs-7Nc" customClass="StockViewController" customModule="JuiceMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kEl-Sf-frr">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PxZ-8f-UoI">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="재고 추가" id="Yw6-li-niI">
                                         <barButtonItem key="rightBarButtonItem" title="닫기" id="6qo-p5-Jqe">
