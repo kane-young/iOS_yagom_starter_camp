@@ -69,8 +69,7 @@ class ViewController: UIViewController {
     
     func updateFruitCount() {
         strawberryCount.text = String(JuiceMaker.shared.readStock(of: .strawberry))
-        bananaCount.text = String(JuiceMaker.shared
-                                    .readStock(of: .banana))
+        bananaCount.text = String(JuiceMaker.shared.readStock(of: .banana))
         kiwiCount.text = String(JuiceMaker.shared.readStock(of: .kiwi))
         pineappleCount.text = String(JuiceMaker.shared.readStock(of: .pineapple))
         mangoCount.text = String(JuiceMaker.shared.readStock(of: .mango))

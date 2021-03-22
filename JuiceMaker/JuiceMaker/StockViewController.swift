@@ -8,12 +8,6 @@
 import UIKit
 
 class StockViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
     @IBAction func touchUpClosedButton(_ sender: Any) {
         self.presentingViewController?.dismiss(animated: false, completion: nil)
     }
