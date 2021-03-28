@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     //MARK:-- @IBAction Function
 
     @IBAction private func moveStock(_ sender: Any) {
-        guard let stockVC = self.storyboard?.instantiateViewController(identifier: "stockVC") else {
+        guard let stockVC = self.storyboard?.instantiateViewController(identifier: JuiceMakerConstant.stockVC) else {
             return
         }
 
