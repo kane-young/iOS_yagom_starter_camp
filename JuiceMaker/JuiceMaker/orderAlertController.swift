@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrderAlertController: UIAlertController {
+extension UIAlertController {
     func alertOfSuccess(juice: Juice) -> UIAlertController {
         let alert = UIAlertController(title: "\(juice.name) " + JuiceMakerConstant.successTitle, message: JuiceMakerConstant.successMessage, preferredStyle: .alert)
         let ok = UIAlertAction(title: JuiceMakerConstant.yes, style: .default, handler: nil)

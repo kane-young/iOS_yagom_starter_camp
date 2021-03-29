@@ -11,7 +11,7 @@ class OrderJuiceButton: UIButton {
     var juice: Juice?
     
     func make(using juice: Juice) -> UIAlertController {
-        let alert = OrderAlertController()
+        let alert = UIAlertController()
         do {
             try JuiceMaker.shared.makeJuice(using: juice)
             return alert.alertOfSuccess(juice: juice)
