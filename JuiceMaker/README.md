@@ -15,6 +15,17 @@
 - Dictionary 사용
 - struct vs class
 
+🛠  Refactoring 일정
+
+- 03-21 : Step2 메이슨 피드백 refactoring 진행
+
+- 04-03 : 
+
+
+⚒️ Refactoring 상세 내용
+
+- 
+
 🔑 관련 TIL 링크
 
 [21.03.08](https://velog.io/@leeyoungwoozz/TIL-2021.03.09-Mon)
