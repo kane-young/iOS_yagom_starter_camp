@@ -32,21 +32,24 @@ class StockViewController: UIViewController {
         JuiceMaker.shared.stock.changeStock(of: .mango, count: Int(mangoStepper.value))
         JuiceMaker.shared.stock.changeStock(of: .kiwi, count: Int(kiwiStepper.value))
         JuiceMaker.shared.stock.changeStock(of: .pineapple, count: Int(pineappleStepper.value))
-        self.presentingViewController?.dismiss(animated: false, completion: nil)
+        
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "setStock"), object: nil)
+        
+        self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func changeStock(_ sender: UIStepper) {
         switch sender.tag {
         case 0:
-            strawberryStockLabel.text = String(sender.value)
+            strawberryStockLabel.text = String(Int(sender.value))
         case 1:
-            bananaStockLabel.text = String(sender.value)
+            bananaStockLabel.text = String(Int(sender.value))
         case 2:
-            pineappleStockLabel.text = String(sender.value)
+            pineappleStockLabel.text = String(Int(sender.value))
         case 3:
-            kiwiStockLabel.text = String(sender.value)
+            kiwiStockLabel.text = String(Int(sender.value))
         default:
-            mangoStockLabel.text = String(sender.value)
+            mangoStockLabel.text = String(Int(sender.value))
         }
     }
     

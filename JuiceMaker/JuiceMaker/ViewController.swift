@@ -28,12 +28,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateFruitStock), name: Notification.Name(rawValue: "setStock"), object: nil)
+
         initializeButtons()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateFruitCount()
     }
     
     //MARK:-- @IBAction Function
@@ -52,7 +49,7 @@ class ViewController: UIViewController {
         }
         let alert = sender.make(using: juice)
         self.present(alert, animated: true, completion: nil)
-        updateFruitCount()
+        updateFruitStock()
     }
 
     //MARK:-- function
@@ -67,7 +64,7 @@ class ViewController: UIViewController {
         orderPineappleJuiceButton.juice = .pineapple
     }
     
-    private func updateFruitCount() {
+    @objc private func updateFruitStock() {
         strawberryCountLabel.text = String(JuiceMaker.shared.readStock(of: .strawberry))
         bananaCountLabel.text = String(JuiceMaker.shared.readStock(of: .banana))
         kiwiCountLabel.text = String(JuiceMaker.shared.readStock(of: .kiwi))
