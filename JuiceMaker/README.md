@@ -45,16 +45,16 @@
 
 🔑 관련 TIL 링크
 
-[21.03.08](https://velog.io/@leeyoungwoozz/TIL-2021.03.09-Mon)
+[21.03.08](https://velog.io/@leeyoungwoozz/TIL-2021.03.09-Mon) - UML 작성 및 설계
 
-[21.03.09](https://velog.io/@leeyoungwoozz/TIL-2021.03.10-Wed)
+[21.03.09](https://velog.io/@leeyoungwoozz/TIL-2021.03.10-Wed) - optional, error, CustomStringConvertible 학습
 
-[21.03.11](https://velog.io/@leeyoungwoozz/TIL-2021.03.11-Thu)
+[21.03.11](https://velog.io/@leeyoungwoozz/TIL-2021.03.11-Thu) - struct vs class 에 대한 고찰
 
-[21.03.12](https://velog.io/@leeyoungwoozz/TIL-2021.03.14-Fri)
+[21.03.12](https://velog.io/@leeyoungwoozz/TIL-2021.03.14-Fri) - 디자인패턴(SingleTon) 학습
 
-[21.03.15](https://velog.io/@leeyoungwoozz/TIL-2021.03.15-Mon)
+[21.03.15](https://velog.io/@leeyoungwoozz/TIL-2021.03.15-Mon) - Dynamic Dispatch 학습
 
-[21.03.16](https://velog.io/@leeyoungwoozz/TIL-2021.03.16-Tue)
+[21.03.16](https://velog.io/@leeyoungwoozz/TIL-2021.03.16-Tue) - View 레이아웃 LifeCycle 학습1
 
-[21.03.19](https://velog.io/@leeyoungwoozz/TIL-2021.03.19-Fri)
+[21.03.19](https://velog.io/@leeyoungwoozz/TIL-2021.03.19-Fri) - View 레이아웃 LifeCycle 학습2
