@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8xy-oJ-TA3">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina5_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,149 +13,191 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JuiceMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="strawberry" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-xq-wUY">
-                                <rect key="frame" x="60" y="62" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="Inl-jm-fVg">
-                                <rect key="frame" x="222" y="62" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="파인애플" translatesAutoresizingMaskIntoConstraints="NO" id="P0J-Jv-GGJ">
-                                <rect key="frame" x="384" y="62" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="키위" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-yC-Mwl">
-                                <rect key="frame" x="546" y="62" width="125" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mango" translatesAutoresizingMaskIntoConstraints="NO" id="vnx-eO-HHB">
-                                <rect key="frame" x="708" y="62" width="128" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddR-gt-XFN">
-                                <rect key="frame" x="60" y="195" width="125" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbz-dc-Ktc">
-                                <rect key="frame" x="222" y="195" width="125" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um5-92-aTG">
-                                <rect key="frame" x="384" y="195" width="125" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghS-vv-UcU">
-                                <rect key="frame" x="546" y="195" width="125" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTj-sr-IKQ">
-                                <rect key="frame" x="711" y="195" width="125" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCV-M7-W1O" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
-                                <rect key="frame" x="60" y="264" width="287" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="딸바 쥬스 주문">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sWi-22-Rmo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK8-og-7fr" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
-                                <rect key="frame" x="60" y="323" width="130" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="딸기쥬스 주문">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="phG-qp-yMt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kt-tf-yIh" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
-                                <rect key="frame" x="217" y="323" width="130" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="바나나쥬스 주문">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sgo-uL-fHQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqD-ol-OGW" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
-                                <rect key="frame" x="546" y="323" width="130" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="키위쥬스 주문">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVh-0m-75d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPp-Df-Ur3" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
-                                <rect key="frame" x="384" y="323" width="130" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="파인애플쥬스 주문">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aK9-RG-iEq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDa-UI-Ozu" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
-                                <rect key="frame" x="711" y="323" width="130" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="망고쥬스 주문">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IM4-NB-xSc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcS-xf-6ln" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
-                                <rect key="frame" x="549" y="264" width="287" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="망키쥬스 주문">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOW-z9-UjA"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="PSN-a8-Hlu">
+                                <rect key="frame" x="20" y="64" width="696" height="109.66666666666669"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="strawberry" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-xq-wUY">
+                                        <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="109.66666666666667"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Gkd-xq-wUY" secondAttribute="height" multiplier="1:1" id="lLV-BG-E7L"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="Inl-jm-fVg">
+                                        <rect key="frame" x="146.66666666666666" y="0.0" width="109.66666666666666" height="109.66666666666667"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="파인애플" translatesAutoresizingMaskIntoConstraints="NO" id="P0J-Jv-GGJ">
+                                        <rect key="frame" x="293.33333333333331" y="0.0" width="109.33333333333331" height="109.66666666666667"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="키위" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-yC-Mwl">
+                                        <rect key="frame" x="439.66666666666669" y="0.0" width="109.66666666666669" height="109.66666666666667"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mango" translatesAutoresizingMaskIntoConstraints="NO" id="vnx-eO-HHB">
+                                        <rect key="frame" x="586.33333333333337" y="0.0" width="109.66666666666663" height="109.66666666666667"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Inl-jm-fVg" firstAttribute="width" secondItem="Gkd-xq-wUY" secondAttribute="width" id="2qT-tx-fI7"/>
+                                    <constraint firstItem="P0J-Jv-GGJ" firstAttribute="width" secondItem="Gkd-xq-wUY" secondAttribute="width" id="Edz-lh-b1h"/>
+                                    <constraint firstItem="vnx-eO-HHB" firstAttribute="width" secondItem="Gkd-xq-wUY" secondAttribute="width" id="FnD-X6-MOu"/>
+                                    <constraint firstItem="4aU-yC-Mwl" firstAttribute="width" secondItem="Gkd-xq-wUY" secondAttribute="width" id="Wwq-0C-BQk"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="bva-GT-mXL">
+                                <rect key="frame" x="20" y="183.66666666666666" width="696" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddR-gt-XFN">
+                                        <rect key="frame" x="0.0" y="0.0" width="109.66666666666667" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbz-dc-Ktc">
+                                        <rect key="frame" x="146.66666666666666" y="0.0" width="109.66666666666666" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um5-92-aTG">
+                                        <rect key="frame" x="293.33333333333331" y="0.0" width="109.33333333333331" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghS-vv-UcU">
+                                        <rect key="frame" x="439.66666666666669" y="0.0" width="109.66666666666669" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTj-sr-IKQ">
+                                        <rect key="frame" x="586.33333333333337" y="0.0" width="109.66666666666663" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cTj-sr-IKQ" firstAttribute="width" secondItem="ddR-gt-XFN" secondAttribute="width" id="3fR-eI-w8I"/>
+                                    <constraint firstItem="Gbz-dc-Ktc" firstAttribute="width" secondItem="ddR-gt-XFN" secondAttribute="width" id="MkI-z8-K38"/>
+                                    <constraint firstItem="Um5-92-aTG" firstAttribute="width" secondItem="ddR-gt-XFN" secondAttribute="width" id="o4j-aU-lcD"/>
+                                    <constraint firstItem="ghS-vv-UcU" firstAttribute="width" secondItem="ddR-gt-XFN" secondAttribute="width" id="oDL-hw-FLj"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="202" translatesAutoresizingMaskIntoConstraints="NO" id="lJk-g1-eqX">
+                                <rect key="frame" x="20" y="304" width="696" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCV-M7-W1O" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="203.66666666666666" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="딸바 쥬스 주문">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sWi-22-Rmo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcS-xf-6ln" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
+                                        <rect key="frame" x="405.66666666666674" y="0.0" width="290.33333333333326" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="망키쥬스 주문">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOW-z9-UjA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="MXF-af-93m">
+                                <rect key="frame" x="20" y="364" width="696" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK8-og-7fr" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="딸기쥬스 주문">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="phG-qp-yMt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kt-tf-yIh" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
+                                        <rect key="frame" x="161" y="0.0" width="51.666666666666657" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="바나나쥬스 주문">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sgo-uL-fHQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPp-Df-Ur3" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
+                                        <rect key="frame" x="244.66666666666669" y="0.0" width="129" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="파인애플쥬스 주문">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aK9-RG-iEq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqD-ol-OGW" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
+                                        <rect key="frame" x="405.66666666666669" y="0.0" width="129.33333333333331" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="키위쥬스 주문">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVh-0m-75d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDa-UI-Ozu" customClass="OrderJuiceButton" customModule="JuiceMaker" customModuleProvider="target">
+                                        <rect key="frame" x="567" y="0.0" width="129" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.92230918017550256" blue="0.42993472243494957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="망고쥬스 주문">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="orderJuice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IM4-NB-xSc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CqD-ol-OGW" firstAttribute="width" secondItem="cK8-og-7fr" secondAttribute="width" id="LCV-iG-Hr3"/>
+                                    <constraint firstItem="MPp-Df-Ur3" firstAttribute="width" secondItem="cK8-og-7fr" secondAttribute="width" id="iLb-p8-hRg"/>
+                                    <constraint firstItem="sDa-UI-Ozu" firstAttribute="width" secondItem="cK8-og-7fr" secondAttribute="width" id="vYf-B6-Wr0"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BcS-xf-6ln" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="75:107" id="0WR-tE-lkp"/>
+                            <constraint firstItem="PSN-a8-Hlu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="2Ef-h8-ekR"/>
+                            <constraint firstItem="MXF-af-93m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ek5-WL-Ncz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MXF-af-93m" secondAttribute="bottom" constant="20" id="FcF-3L-oPU"/>
+                            <constraint firstItem="PSN-a8-Hlu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Hs3-Sc-02c"/>
+                            <constraint firstItem="MXF-af-93m" firstAttribute="top" secondItem="lJk-g1-eqX" secondAttribute="bottom" constant="30" id="R9a-Oc-7ax"/>
+                            <constraint firstItem="BcS-xf-6ln" firstAttribute="trailing" secondItem="sDa-UI-Ozu" secondAttribute="trailing" id="dwa-Ay-QJB"/>
+                            <constraint firstItem="lJk-g1-eqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dyX-Cz-b6I"/>
+                            <constraint firstItem="PSN-a8-Hlu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eFd-m9-TxG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MXF-af-93m" secondAttribute="trailing" constant="20" id="fkp-TP-fzw"/>
+                            <constraint firstItem="bva-GT-mXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iEv-WA-rjZ"/>
+                            <constraint firstItem="LCV-M7-W1O" firstAttribute="trailing" secondItem="MXF-af-93m" secondAttribute="trailing" id="jPa-Ys-mJd"/>
+                            <constraint firstItem="LCV-M7-W1O" firstAttribute="leading" secondItem="cK8-og-7fr" secondAttribute="leading" id="mu5-aP-DhV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lJk-g1-eqX" secondAttribute="trailing" constant="20" id="nMT-Ld-t3J"/>
+                            <constraint firstItem="bva-GT-mXL" firstAttribute="top" secondItem="PSN-a8-Hlu" secondAttribute="bottom" constant="10" id="qDe-Ju-0Dt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bva-GT-mXL" secondAttribute="trailing" constant="20" id="qnD-BE-s1w"/>
+                            <constraint firstItem="BcS-xf-6ln" firstAttribute="leading" secondItem="CqD-ol-OGW" secondAttribute="leading" id="s6e-xB-eCB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="맛있는 쥬스를 만들어 드려요!" id="gRa-eP-KMK">
                         <barButtonItem key="rightBarButtonItem" title="재고 수정" id="dQ5-1w-n4C">
@@ -188,11 +230,11 @@
             <objects>
                 <viewController storyboardIdentifier="stockVC" id="OM7-Cs-7Nc" customClass="StockViewController" customModule="JuiceMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kEl-Sf-frr">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PxZ-8f-UoI">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
                                 <items>
                                     <navigationItem title="재고 추가" id="Yw6-li-niI">
                                         <barButtonItem key="rightBarButtonItem" title="닫기" id="6qo-p5-Jqe">
@@ -223,7 +265,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8xy-oJ-TA3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yeQ-0S-LoK">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
