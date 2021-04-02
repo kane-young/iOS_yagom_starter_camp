@@ -112,6 +112,12 @@ class JuiceMaker {
             guard stock.readCount(of: ingredient) >= information.count else {
                 throw JuiceMakerError.outOfStock
             }
+        }
+        
+        for (ingredient, information) in juice.recipe {
+            guard stock.readCount(of: ingredient) >= information.count else {
+                throw JuiceMakerError.outOfStock
+            }
             
             stock.subtractStock(of: ingredient, count: information.count)
         }
