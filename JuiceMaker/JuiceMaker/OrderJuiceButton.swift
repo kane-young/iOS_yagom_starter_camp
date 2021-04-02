@@ -8,6 +8,10 @@
 import UIKit
 
 class OrderJuiceButton: UIButton {
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        self.titleLabel?.adjustsFontSizeToFitWidth = true
+    }
     var juice: Juice?
     
     func make(using juice: Juice) -> UIAlertController {

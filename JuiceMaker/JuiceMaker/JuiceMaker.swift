@@ -9,7 +9,7 @@ import Foundation
 typealias FruitCount = [Fruit: FruitInformation]
 
 struct FruitInformation {
-    var count: UInt
+    var count: Int
 }
 
 enum Fruit {
@@ -70,23 +70,29 @@ enum JuiceMakerError: Error {
 struct FruitStock {
     private var remainedFruit: FruitCount
     
-    init(initialCount: UInt) {
+    init(initialCount: Int) {
         remainedFruit = [.strawberry: FruitInformation(count: initialCount), .banana: FruitInformation(count: initialCount), .kiwi: FruitInformation(count: initialCount), .pineapple: FruitInformation(count: initialCount), .mango: FruitInformation(count: initialCount)]
     }
     
-    mutating func addStock(of fruit: Fruit, count: UInt) {
+    mutating func addStock(of fruit: Fruit, count: Int) {
         if let storedFruit = remainedFruit[fruit] {
             remainedFruit[fruit]?.count = storedFruit.count + count
         }
     }
-    
-    mutating func subtractStock(of fruit: Fruit, count: UInt) {
+
+    mutating func subtractStock(of fruit: Fruit, count: Int) {
         if let storedFruit = remainedFruit[fruit] {
             remainedFruit[fruit]?.count = storedFruit.count - count
         }
     }
     
-    func readCount(of fruit: Fruit) -> UInt {
+    mutating func changeStock(of fruit: Fruit, count: Int) {
+        if let _ = remainedFruit[fruit] {
+            remainedFruit[fruit]?.count = count
+        }
+    }
+    
+    func readCount(of fruit: Fruit) -> Int {
         if let storedFruit = remainedFruit[fruit] {
             return storedFruit.count
         } else {
@@ -96,7 +102,7 @@ struct FruitStock {
 }
 
 class JuiceMaker {
-    private var stock: FruitStock = FruitStock(initialCount: 10)
+    var stock: FruitStock = FruitStock(initialCount: 10)
     static let shared = JuiceMaker()
     
     private init() { }
@@ -111,7 +117,7 @@ class JuiceMaker {
         }
     }
     
-    func readStock(of fruit: Fruit) -> String {
-        return String(stock.readCount(of: fruit))
+    func readStock(of fruit: Fruit) -> Int {
+        return stock.readCount(of: fruit)
     }
 }
