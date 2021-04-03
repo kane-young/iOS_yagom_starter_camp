@@ -9,6 +9,5 @@ import Foundation
 protocol Calculatable {
     func reset()
     func input(_ inputValue: String)
-    func output()
-    func calculate(currentOperator: String)
+    func output() -> String?
 }

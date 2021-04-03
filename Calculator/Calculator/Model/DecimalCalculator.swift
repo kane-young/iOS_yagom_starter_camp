@@ -1,6 +1,6 @@
 import Foundation
 
-class DecimalCalculator {
+final class DecimalCalculator: Calculatable {
     private var lowOperatorStack = Stack<DecimalOperatorType>()
     private var highOperatorStack = Stack<DecimalOperatorType>()
     private var operandStack = Stack<Double>()
@@ -10,6 +10,7 @@ class DecimalCalculator {
     private var lastOperand = Double.zero
     private var lastOperator = DecimalOperatorType.add.description
     
+    // MARK: - protocol function
     func input(_ inputValue: String) {
         if operators.contains(inputValue) == false {
             operandBuffer += inputValue
@@ -49,6 +50,18 @@ class DecimalCalculator {
         }
     }
     
+    func output() -> String? {
+        guard let outputValue = operandStack.peek() else { return String.zero }
+        return convertInteger(value: String(outputValue))
+    }
+    
+    func reset() {
+        lowOperatorStack.reset()
+        highOperatorStack.reset()
+        operandBuffer = String.blank
+    }
+    
+    // MARK: - Operation
     private func calculate(currentOperator: String) {
         if lowOperatorStack.isEmpty {
             guard let highOperator = highOperatorStack.pop() else { return }
@@ -92,17 +105,6 @@ class DecimalCalculator {
         }
     }
     
-    func output() {
-        guard let outputValue = operandStack.peek() else { return }
-        print("디스플레이 출력 :", convertInteger(value: String(outputValue)))
-    }
-    
-    func reset() {
-        lowOperatorStack.reset()
-        highOperatorStack.reset()
-        operandBuffer = String.blank
-    }
-    
     private func pickCalculation(operatorType: DecimalOperatorType) -> Double? {
         guard let first = operandStack.pop(), let second = operandStack.pop() else { fatalError() }
         switch operatorType {
@@ -119,7 +121,6 @@ class DecimalCalculator {
         }
     }
     
-    // MARK: - Operation
     private func add(first: Double, second: Double) -> String {
         let result = convertInteger(value: String(second + first))
         return result

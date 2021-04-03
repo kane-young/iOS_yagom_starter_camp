@@ -8,116 +8,198 @@
 import Foundation
 
 final class BinaryCalculator: Calculatable {
-    private var stack: Stack = Stack<String>()
+    private var operatorStack: Stack = Stack<String>()
     private var postfixNumbers = [String]()
-    private var operand = String.blank
+    private var operandBuffer = String.blank
     private let operators = BinaryOperatorType.allCases.map{ $0.rawValue }
+    private var isInputedOperator = false
     
+    //MARK: - Calculatable 프로토콜의 메서드
     func input(_ input: String) {
-        if !operators.contains(input) {
-            operand = operand + input
-        } else if input == BinaryOperatorType.equal.symbol {
-            postfixNumbers.append(operand)
-            operand = String.blank
-            moveAllToPostfixNumbers()
-            for _ in Int.zero..<postfixNumbers.count {
-                let postfixFirstOperator = postfixNumbers.removeFirst()
-                calculate(currentOperator: postfixFirstOperator)
-            }
-        } else if input == BinaryOperatorType.not.symbol {
-            guard let binaryNumber = UInt8(operand, radix: Int.binary) else { return }
-            let result = ~binaryNumber
-            stack.push(String(result, radix: Int.binary))
-            operand = String.blank
+        if operators.contains(input) == false {
+            inputNumber(input)
+        } else if input == "~" {
+            inputNot()
+        } else if input == "=" {
+            inputEqual()
         } else {
-            postfixNumbers.append(operand)
-            operand = String.blank
-            moveHigherPrioritythan(input)
-            pushOperatorInStack(input)
+            inputOperator(input)
         }
     }
     
-    func calculate(currentOperator: String) {
+    func output() -> String? {
+        guard let top = operatorStack.peek() else { return String.zero }
+        return top
+    }
+    
+    func reset() {
+        operatorStack.reset()
+        postfixNumbers.removeAll()
+        operandBuffer = String.blank
+    }
+    
+    //MARK: - input 관련 method
+    private func inputNumber(_ input: String) {
+        operandBuffer = operandBuffer + input
+        isInputedOperator = false
+    }
+    
+    private func inputOperator(_ input: String) {
+        if isInputedOperator == false {
+            postfixNumbers.append(operandBuffer)
+            operandBuffer = String.blank
+            moveHigherPrioritythan(input)
+            pushOperatorInStack(input)
+            isInputedOperator = true
+        } else {
+            _ = operatorStack.pop()
+            moveHigherPrioritythan(input)
+            pushOperatorInStack(input)
+            isInputedOperator = true
+        }
+    }
+    
+    private func inputNot() {
+        guard let number = UInt8(operandBuffer, radix: Int.binary) else { return }
+        operandBuffer = String(~number, radix: Int.binary)
+        isInputedOperator = false
+    }
+    
+    private func inputEqual() {
+        postfixNumbers.append(operandBuffer)
+        operandBuffer = String.blank
+        moveAllToPostfixNumbers()
+        for _ in Int.zero..<postfixNumbers.count {
+            let postfixElement = postfixNumbers.removeFirst()
+            calculate(currentOperator: postfixElement)
+        }
+    }
+    
+    private func calculate(currentOperator: String) {
         if !operators.contains(currentOperator) {
-            stack.push(currentOperator)
+            operatorStack.push(currentOperator)
             return
         }
         
-        guard let stackFirst = stack.pop() else { return }
+        guard let stackFirst = operatorStack.pop() else { return }
         guard let numberFirst = UInt8(stackFirst, radix: Int.binary) else { return }
         
-        guard let stackSecond = stack.pop() else { return }
+        guard let stackSecond = operatorStack.pop() else { return }
         guard let numberSecond = UInt8(stackSecond, radix: Int.binary) else { return }
         
         let result = infixCalculate(firstNumber: numberFirst, operatorSymbol: currentOperator, secondNumber: numberSecond)
-        stack.push(result)
+        operatorStack.push(result)
     }
     
-    func infixCalculate(firstNumber: UInt8, operatorSymbol: String, secondNumber: UInt8) -> String {
-        var result: UInt8 = UInt8.zero
+    private func infixCalculate(firstNumber: UInt8, operatorSymbol: String, secondNumber: UInt8) -> String {
         let error: Error = CalculatorError.invalidOperator
         
         switch operatorSymbol {
         case BinaryOperatorType.subtract.symbol:
-            result = secondNumber - firstNumber
+            return subtract(firstNumber: firstNumber, secondNumber: secondNumber)
         case BinaryOperatorType.add.symbol:
-            result = secondNumber + firstNumber
+            return add(firstNumber: firstNumber, secondNumber: secondNumber)
         case BinaryOperatorType.or.symbol:
-            result = secondNumber | firstNumber
+            return or(firstNumber: firstNumber, secondNumber: secondNumber)
         case BinaryOperatorType.nor.symbol:
-            result = ~(secondNumber | firstNumber)
+            return nor(firstNumber: firstNumber, secondNumber: secondNumber)
         case BinaryOperatorType.and.symbol:
-            result = secondNumber & firstNumber
+            return and(firstNumber: firstNumber, secondNumber: secondNumber)
         case BinaryOperatorType.nand.symbol:
-            result = ~(secondNumber & firstNumber)
+            return nand(firstNumber: firstNumber, secondNumber: secondNumber)
         case BinaryOperatorType.xor.symbol:
-            result = secondNumber ^ firstNumber
+            return xor(firstNumber: firstNumber, secondNumber: secondNumber)
         case BinaryOperatorType.leftShift.symbol:
-            result = secondNumber << firstNumber
+            return leftShift(firstNumber: firstNumber, secondNumber: secondNumber)
         case BinaryOperatorType.rightShift.symbol:
-            result = secondNumber >> firstNumber
+            return rightShift(firstNumber: firstNumber, secondNumber: secondNumber)
         default:
             print(error.localizedDescription)
             fatalError()
         }
+    }
+    
+    //MARK: - 중위연산 수행하는 method
+    private func add(firstNumber: UInt8, secondNumber: UInt8) -> String {
+        var result: UInt8 = UInt8.zero
+        result = secondNumber + firstNumber
         return String(result, radix: Int.binary)
     }
     
-    func pushOperatorInStack(_ input: String) {
-        stack.push(input)
+    private func subtract(firstNumber: UInt8, secondNumber: UInt8) -> String {
+        var result: UInt8 = UInt8.zero
+        result = secondNumber - firstNumber
+        return String(result, radix: Int.binary)
     }
     
-    func moveAllToPostfixNumbers() {
-        for _ in Int.zero..<stack.count {
-            guard let stackTop = stack.pop() else { return }
+    private func or(firstNumber: UInt8, secondNumber: UInt8) -> String {
+        var result: UInt8 = UInt8.zero
+        result = secondNumber | firstNumber
+        return String(result, radix: Int.binary)
+    }
+    
+    private func nor(firstNumber: UInt8, secondNumber: UInt8) -> String {
+        var result: UInt8 = UInt8.zero
+        result = ~(secondNumber | firstNumber)
+        return String(result, radix: Int.binary)
+    }
+    
+    private func xor(firstNumber: UInt8, secondNumber: UInt8) -> String {
+        var result: UInt8 = UInt8.zero
+        result = secondNumber ^ firstNumber
+        return String(result, radix: Int.binary)
+    }
+    
+    private func and(firstNumber: UInt8, secondNumber: UInt8) -> String {
+        var result: UInt8 = UInt8.zero
+        result = secondNumber & firstNumber
+        return String(result, radix: Int.binary)
+    }
+    
+    private func nand(firstNumber: UInt8, secondNumber: UInt8) -> String {
+        var result: UInt8 = UInt8.zero
+        result = ~(secondNumber & firstNumber)
+        return String(result, radix: Int.binary)
+    }
+    
+    private func leftShift(firstNumber: UInt8, secondNumber: UInt8) -> String {
+        var result: UInt8 = UInt8.zero
+        result = secondNumber << firstNumber
+        return String(result, radix: Int.binary)
+    }
+    
+    private func rightShift(firstNumber: UInt8, secondNumber: UInt8) -> String {
+        var result: UInt8 = UInt8.zero
+        result = secondNumber >> firstNumber
+        return String(result, radix: Int.binary)
+    }
+    
+    //MARK: - stack, array로 이동하게하는 methods
+    private func pushOperatorInStack(_ input: String) {
+        operatorStack.push(input)
+    }
+    
+    private func moveAllToPostfixNumbers() {
+        for _ in Int.zero..<operatorStack.count {
+            guard let stackTop = operatorStack.pop() else { return }
             postfixNumbers.append(stackTop)
         }
     }
     
-    func moveHigherPrioritythan(_ input: String) {
+    //MARK: - priority에 따른 처리 담당 method
+    private func moveHigherPrioritythan(_ input: String) {
         guard let inputPriority = BinaryOperatorType(rawValue: input)?.priority else { return }
         
-        for _ in Int.zero..<stack.count {
-            guard let stackTop = stack.peek() else { return }
+        for _ in Int.zero..<operatorStack.count {
+            guard let stackTop = operatorStack.peek() else { return }
             guard let stackTopOperatorType = BinaryOperatorType(rawValue: stackTop) else { return }
             if inputPriority <= stackTopOperatorType.priority {
-                guard let value = stack.pop() else { return }
+                guard let value = operatorStack.pop() else { return }
                 postfixNumbers.append(value)
             } else {
                 postfixNumbers.append(input)
                 break
             }
         }
-    }
-    
-    func output() {
-        guard let top = stack.peek() else { return }
-        print("디스플레이 출력 :", top)
-    }
-    
-    func reset() {
-        stack.reset()
-        postfixNumbers.removeAll()
-        operand = String.blank
     }
 }

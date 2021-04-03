@@ -17,17 +17,6 @@ enum DecimalOperatorType: String, CaseIterable {
     case multiple = "*"
     case divide = "/"
     case equal = "="
-    
-    var priority: Bool {
-        switch self {
-        case .add, .subtract:
-            return false
-        case .multiple, .divide:
-            return true
-        case .equal:
-            return true
-        }
-    }
 }
 
 extension DecimalOperatorType: CustomStringConvertible {
