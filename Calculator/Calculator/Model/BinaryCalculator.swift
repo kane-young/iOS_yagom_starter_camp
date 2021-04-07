@@ -16,11 +16,13 @@ final class BinaryCalculator: Calculatable {
     
     //MARK: - Calculatable 프로토콜의 메서드
     func input(_ input: String) {
-        if operators.contains(input) == false {
+        if input == ResetType.reset {
+            reset()
+        } else if operators.contains(input) == false {
             inputNumber(input)
-        } else if input == "~" {
+        } else if input == BinaryOperatorType.not.symbol {
             inputNot()
-        } else if input == "=" {
+        } else if input == BinaryOperatorType.equal.symbol {
             inputEqual()
         } else {
             inputOperator(input)

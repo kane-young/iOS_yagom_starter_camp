@@ -8,7 +8,7 @@
 import Foundation
 
 enum ResetType {
-    static let reset = "c"
+    static let reset = "C"
 }
 
 enum DecimalOperatorType: String, CaseIterable {
