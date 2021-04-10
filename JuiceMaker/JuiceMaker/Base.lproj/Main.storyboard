@@ -340,62 +340,64 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="XPJ-qB-hss">
-                                <rect key="frame" x="64" y="243.5" width="812" height="32"/>
-                                <subviews>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="WxE-MN-on3">
-                                        <rect key="frame" x="0.0" y="0.0" width="131" height="32"/>
-                                        <connections>
-                                            <action selector="changeStock:" destination="OM7-Cs-7Nc" eventType="valueChanged" id="6DX-7B-l9m"/>
-                                        </connections>
-                                    </stepper>
-                                    <stepper opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="I1P-qv-S3J">
-                                        <rect key="frame" x="170" y="0.0" width="131.5" height="32"/>
-                                        <connections>
-                                            <action selector="changeStock:" destination="OM7-Cs-7Nc" eventType="valueChanged" id="DNR-wa-idE"/>
-                                        </connections>
-                                    </stepper>
-                                    <stepper opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="AX9-yj-Lqh">
-                                        <rect key="frame" x="340.5" y="0.0" width="131" height="32"/>
-                                        <connections>
-                                            <action selector="changeStock:" destination="OM7-Cs-7Nc" eventType="valueChanged" id="OHm-xb-jpa"/>
-                                        </connections>
-                                    </stepper>
-                                    <stepper opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="y8J-56-XvD">
-                                        <rect key="frame" x="510.5" y="0.0" width="131.5" height="32"/>
-                                        <connections>
-                                            <action selector="changeStock:" destination="OM7-Cs-7Nc" eventType="valueChanged" id="2qn-4a-HpV"/>
-                                        </connections>
-                                    </stepper>
-                                    <stepper opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="BDH-IV-Wg7">
-                                        <rect key="frame" x="681" y="0.0" width="131" height="32"/>
-                                        <connections>
-                                            <action selector="changeStock:" destination="OM7-Cs-7Nc" eventType="valueChanged" id="j8b-9k-Z5d"/>
-                                        </connections>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="748" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="WxE-MN-on3">
+                                <rect key="frame" x="83.5" y="253.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="changeStock:" destination="OM7-Cs-7Nc" eventType="valueChanged" id="6DX-7B-l9m"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="I1P-qv-S3J">
+                                <rect key="frame" x="253" y="253.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="changeStock:" destination="OM7-Cs-7Nc" eventType="valueChanged" id="DNR-wa-idE"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="AX9-yj-Lqh">
+                                <rect key="frame" x="423" y="253.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="changeStock:" destination="OM7-Cs-7Nc" eventType="valueChanged" id="OHm-xb-jpa"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="y8J-56-XvD">
+                                <rect key="frame" x="593" y="253.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="changeStock:" destination="OM7-Cs-7Nc" eventType="valueChanged" id="2qn-4a-HpV"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="BDH-IV-Wg7">
+                                <rect key="frame" x="762.5" y="253.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="changeStock:" destination="OM7-Cs-7Nc" eventType="valueChanged" id="j8b-9k-Z5d"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3d2-1g-ToK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fYq-1G-t9D" firstAttribute="centerX" secondItem="3ww-Rw-gGE" secondAttribute="centerX" id="12h-jm-ifP"/>
+                            <constraint firstItem="I1P-qv-S3J" firstAttribute="top" secondItem="WxE-MN-on3" secondAttribute="top" id="2WZ-ex-3uu"/>
+                            <constraint firstItem="AX9-yj-Lqh" firstAttribute="top" secondItem="WxE-MN-on3" secondAttribute="top" id="3Yp-DH-gXC"/>
+                            <constraint firstItem="AX9-yj-Lqh" firstAttribute="centerX" secondItem="ipj-x0-3pN" secondAttribute="centerX" id="AIN-H6-ygn"/>
                             <constraint firstItem="PxZ-8f-UoI" firstAttribute="leading" secondItem="kEl-Sf-frr" secondAttribute="leading" id="Izf-O5-1tv"/>
                             <constraint firstAttribute="trailing" secondItem="gIo-gN-ak4" secondAttribute="trailing" constant="20" id="NJg-mC-3YZ"/>
                             <constraint firstItem="C8J-gh-8ZN" firstAttribute="centerX" secondItem="aiJ-5c-OiU" secondAttribute="centerX" id="Qxi-qn-on2"/>
                             <constraint firstItem="gIo-gN-ak4" firstAttribute="leading" secondItem="3d2-1g-ToK" secondAttribute="leading" constant="20" id="SH3-cj-AeN"/>
+                            <constraint firstItem="I1P-qv-S3J" firstAttribute="centerX" secondItem="fYq-1G-t9D" secondAttribute="centerX" id="Sqj-Qf-7OH"/>
                             <constraint firstItem="iOn-S3-hWc" firstAttribute="top" secondItem="gIo-gN-ak4" secondAttribute="bottom" constant="10" id="T5z-8Y-SAe"/>
                             <constraint firstItem="iOn-S3-hWc" firstAttribute="leading" secondItem="xad-mS-eIf" secondAttribute="leading" id="aWB-qS-edr"/>
                             <constraint firstAttribute="trailing" secondItem="PxZ-8f-UoI" secondAttribute="trailing" id="acg-Fm-fLo"/>
                             <constraint firstItem="ipj-x0-3pN" firstAttribute="centerX" secondItem="Hdc-mL-XPc" secondAttribute="centerX" id="bd0-hg-lMx"/>
+                            <constraint firstItem="WxE-MN-on3" firstAttribute="centerX" secondItem="6gY-kL-mNw" secondAttribute="centerX" id="cOU-aQ-K2H"/>
+                            <constraint firstItem="BDH-IV-Wg7" firstAttribute="top" secondItem="WxE-MN-on3" secondAttribute="top" id="cOa-Xm-QS2"/>
                             <constraint firstItem="gIo-gN-ak4" firstAttribute="top" secondItem="PxZ-8f-UoI" secondAttribute="bottom" constant="20" id="cwO-AA-bS7"/>
                             <constraint firstItem="ENh-7Q-8fy" firstAttribute="centerX" secondItem="0Fm-Fa-Kep" secondAttribute="centerX" id="dsr-nw-Biu"/>
                             <constraint firstItem="PxZ-8f-UoI" firstAttribute="top" secondItem="3d2-1g-ToK" secondAttribute="top" id="f1M-YW-9AI"/>
-                            <constraint firstItem="XPJ-qB-hss" firstAttribute="top" secondItem="iOn-S3-hWc" secondAttribute="bottom" constant="10" id="kwZ-VM-dtx"/>
+                            <constraint firstItem="y8J-56-XvD" firstAttribute="top" secondItem="WxE-MN-on3" secondAttribute="top" id="oDf-d6-2lI"/>
+                            <constraint firstItem="WxE-MN-on3" firstAttribute="top" secondItem="6gY-kL-mNw" secondAttribute="bottom" constant="20" id="qcw-Hc-H04"/>
                             <constraint firstItem="6gY-kL-mNw" firstAttribute="centerX" secondItem="xad-mS-eIf" secondAttribute="centerX" id="su4-Db-Z31"/>
                             <constraint firstItem="iOn-S3-hWc" firstAttribute="trailing" secondItem="gIo-gN-ak4" secondAttribute="trailing" id="vFK-56-dAx"/>
-                            <constraint firstItem="XPJ-qB-hss" firstAttribute="trailing" secondItem="iOn-S3-hWc" secondAttribute="trailing" id="vvS-Kw-4w6"/>
-                            <constraint firstItem="XPJ-qB-hss" firstAttribute="leading" secondItem="iOn-S3-hWc" secondAttribute="leading" id="xmK-AQ-t7x"/>
+                            <constraint firstItem="BDH-IV-Wg7" firstAttribute="centerX" secondItem="ENh-7Q-8fy" secondAttribute="centerX" id="wFZ-HE-A0k"/>
+                            <constraint firstItem="y8J-56-XvD" firstAttribute="centerX" secondItem="C8J-gh-8ZN" secondAttribute="centerX" id="wal-Ah-J9C"/>
                         </constraints>
                     </view>
                     <connections>
