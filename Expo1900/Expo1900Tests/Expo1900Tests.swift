@@ -25,59 +25,19 @@ class Expo1900Tests: XCTestCase {
         decoder = nil
     }
 
-    func testItemAssetName() {
-        guard let dataAsset: NSDataAsset = NSDataAsset(name: itemJson) else {
+    func test_만국박람회_exposition_디코더_확인() {
+        guard let assetData = NSDataAsset(name: expoJson) else {
             XCTFail()
             return
         }
-        
-        do {
-            let result = try decoder.decode([Item].self, from: dataAsset.data)
-            XCTAssertEqual(result.first?.name, "직지심체요절")
-        } catch {
-            print(error.localizedDescription)
-        }
+        _ = try! decoder.decode(Exposition.self, from: assetData.data)
     }
     
-    func testItemAssetImageName() {
-        guard let dataAsset: NSDataAsset = NSDataAsset(name: itemJson) else {
+    func test_만국박람회_한국출품작_디코더_확인() {
+        guard let assetData = NSDataAsset(name: expoJson) else {
             XCTFail()
             return
         }
-        
-        do {
-            let result = try decoder.decode([Item].self, from: dataAsset.data)
-            XCTAssertEqual(result.first?.imageName, "jikji")
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    func testExpositionAssetTitle() {
-        guard let dataAsset: NSDataAsset = NSDataAsset(name: expoJson) else {
-            XCTFail()
-            return
-        }
-        
-        do {
-            let result = try decoder.decode(Exposition.self, from: dataAsset.data)
-            XCTAssertEqual(result.title, "파리 만국박람회 1900(L'Exposition de Paris 1900)")
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    func testExpositionAssetVisitorsFormatter() {
-        guard let dataAsset: NSDataAsset = NSDataAsset(name: expoJson) else {
-            XCTFail()
-            return
-        }
-        
-        do {
-            let result = try decoder.decode(Exposition.self, from: dataAsset.data)
-            XCTAssertEqual(result.visitorsStringFormat, "48,130,300")
-        } catch {
-            print(error.localizedDescription)
-        }
+        _ = try! decoder.decode(Exposition.self, from: assetData.data)
     }
 }
