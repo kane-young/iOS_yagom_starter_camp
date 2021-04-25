@@ -66,6 +66,9 @@ final class ExpositionViewController: UIViewController {
         descriptionLabel.text = data.description
         posterImageView.image = UIImage(named: posterImage)
         itemsListPageButton.setTitle(listPageButtonTitle, for: .normal)
+        itemsListPageButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .body)
+        itemsListPageButton.titleLabel?.adjustsFontForContentSizeCategory = true
+        itemsListPageButton.titleLabel?.adjustsFontSizeToFitWidth = true
         leftOnButtonImageView.image = UIImage(named: flagImage)
         rightOnButtonImageView.image = UIImage(named: flagImage)
     }

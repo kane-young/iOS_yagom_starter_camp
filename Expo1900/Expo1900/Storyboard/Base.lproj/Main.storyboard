@@ -11,7 +11,6 @@
         <!--Exposition View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ExpositionViewController" customModule="Expo1900" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -89,11 +88,13 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="eAa-nF-TGx" firstAttribute="top" secondItem="Ufw-3M-Qx9" secondAttribute="bottom" constant="10" id="2gL-QN-65b"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kjQ-Nl-E7c" secondAttribute="trailing" constant="10" id="3KK-Lx-14j"/>
                                             <constraint firstItem="kjQ-Nl-E7c" firstAttribute="centerX" secondItem="QhL-U7-Wfe" secondAttribute="centerX" id="Dfr-E0-4iB"/>
                                             <constraint firstItem="Ufw-3M-Qx9" firstAttribute="centerX" secondItem="QhL-U7-Wfe" secondAttribute="centerX" id="E6h-K3-CEo"/>
                                             <constraint firstItem="bmq-3n-JGS" firstAttribute="top" secondItem="aVa-LB-bc8" secondAttribute="bottom" constant="10" id="G48-bZ-2eW"/>
                                             <constraint firstItem="eAa-nF-TGx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QhL-U7-Wfe" secondAttribute="leading" constant="10" id="HBj-yl-YpQ"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1eG-y8-g7c" secondAttribute="trailing" constant="10" id="Iad-w1-7Mc"/>
+                                            <constraint firstItem="kjQ-Nl-E7c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QhL-U7-Wfe" secondAttribute="leading" constant="10" id="KKe-DK-5R4"/>
                                             <constraint firstItem="kjQ-Nl-E7c" firstAttribute="top" secondItem="MiX-bG-tv7" secondAttribute="bottom" id="L6r-ED-8Eb"/>
                                             <constraint firstItem="Ufw-3M-Qx9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QhL-U7-Wfe" secondAttribute="leading" constant="10" id="O8j-aP-H5I"/>
                                             <constraint firstItem="1eG-y8-g7c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QhL-U7-Wfe" secondAttribute="leading" constant="10" id="Pdu-tq-vPe"/>
@@ -150,13 +151,13 @@
                         <outlet property="visitorsLabel" destination="1eG-y8-g7c" id="GLh-AI-bAo"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="62.946428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Evb-cc-EqF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fQG-WY-iPD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WhI-Rx-DYv" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5xO-PC-AdE">
@@ -168,6 +169,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WPR-uu-jhC"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQG-WY-iPD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="241" y="63"/>
         </scene>
