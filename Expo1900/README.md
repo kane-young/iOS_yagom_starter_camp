@@ -37,7 +37,7 @@
 스크롤로 만국박람회 정보 확인 가능
 
 <p float= "left">
-  <img src="https://user-images.githubusercontent.com/64566207/116000028-84fd6100-a629-11eb-97f4-4cd20d3969e0.gif" width = 250 />
+  <img src="https://user-images.githubusercontent.com/64566207/116000028-84fd6100-a629-11eb-97f4-4cd20d3969e0.gif" width = 260 />
 </p>
 
 
@@ -47,7 +47,7 @@
 Table을 통해서 한국의 출품작 List를 출력, 간단한 설명을 확인할 수 있음
 
 <p>
-  <img src="https://user-images.githubusercontent.com/64566207/116000031-862e8e00-a629-11eb-89f3-d26271efbd38.gif" width = 250 />
+  <img src="https://user-images.githubusercontent.com/64566207/116000031-862e8e00-a629-11eb-89f3-d26271efbd38.gif" width = 260 />
 </p>
 
 
@@ -57,7 +57,7 @@ Table을 통해서 한국의 출품작 List를 출력, 간단한 설명을 확�
 Table Cell 선택 시 해당 Item으로 이동하여 상세 정보 확인 가능
 
 <p>
-  <img src="https://user-images.githubusercontent.com/64566207/116000033-875fbb00-a629-11eb-8330-4c287ffbf946.gif" width = 250/>
+  <img src="https://user-images.githubusercontent.com/64566207/116000033-875fbb00-a629-11eb-8330-4c287ffbf946.gif" width = 260/>
 </p>
 
 
